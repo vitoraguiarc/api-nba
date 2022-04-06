@@ -169,7 +169,7 @@ const limparElementos = (elemento) => {
 };
 
 //pega o click no container das imagens dos times
-const handleClickHawks = async ({ target }) => {
+const handleClick = async ({ target }) => {
   //identifica se uma imagem de time foi clicada
   if (target.classList.value === "logos") {
     //chamada função para limpar os cards
@@ -188,4 +188,4 @@ document.getElementById("buscar").addEventListener("click", carregarCard);
 
 document
   .getElementById("container-teams")
-  .addEventListener("click", handleClickHawks);
+  .addEventListener("click", handleClick);
