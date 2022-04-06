@@ -38,6 +38,8 @@ const criarImg = async (player) => {
   //div que vai conter os cards
   const cards = document.createElement("div");
   cards.classList.add("cards");
+  cards.setAttribute('id', `card-${player.personId}`);
+
 
   //div para as stats
   const blockStats = document.createElement("div");
@@ -183,6 +185,13 @@ const handleClick = async ({ target }) => {
     document.getElementById("team").value = target.id;
   }
 };
+
+// const modal = () => {
+
+//   const modalAc = document.getElementById(cards)
+
+
+// }
 
 document.getElementById("buscar").addEventListener("click", carregarCard);
 
