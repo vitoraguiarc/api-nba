@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(#17408b, #c9082a);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+header {
+  background: linear-gradient(#17408b, #c9082a);
+  height: 10vh;
+  width: 22vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid;
+  margin-bottom: 2vh;
+}
+
+header p {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4rem;
+  text-align: center;
+  color: #ffffff;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  height: auto;
+}
+
+#buscar {
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  border: solid 3.5px black;
+  border-radius: 40px;
+  background:  #c9082a;
+  color: #ffffff;
+  transition: 0.3s all;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+#buscar:hover {
+  background-color: #17408b;
+  transform: scale(1.1);
+}
+
+.pesquisa {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.busca-by-logo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 950px;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.team-name {
+  width: 42vw;
+  height: 4.5vh;
+  text-align: center;
+  border-radius: 30px;
+  border: none;
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-right: 15px;
+  outline: none;
+}
+
+.team-name:focus {
+  transform: scale(2);
+}
+
+#team::placeholder {
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.player-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  height: auto;
+  width: auto;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 550px;
+  margin-bottom: 25px;
+  background-color: #ffffff;
+  border: solid 3px #000;
+
+}
+
+
+.card-imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: auto;
+  margin-bottom: 15px;
+}
+
+.card-stats {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+}
+
+.cont-ppg {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.div-point {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.central {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cont-apg {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.div-ass {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.central-ass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cont-rpg {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.div-reb {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.central-reb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.card-stats h2 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2rem;
+
+}
+
+.card-stats p {
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+
+.cont-exp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: 500 ;
+  
+}
+
+
+.logos {
+  width: 130px;
+  height: 100px;
+  cursor: pointer;
+  border: solid 3px #000;
+  transition: 0.4s all;
+}
+
+.logos:hover {
+  transform: scale(1.1);
+  filter: grayscale(70%)
+}
