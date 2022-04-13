@@ -6,6 +6,12 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+  
+}
+
+
 body {
   background: linear-gradient(#17408b, #c9082a);
   height: auto;
@@ -16,6 +22,8 @@ body {
   padding: 45px;
 }
 
+
+
 header {
   background: linear-gradient(#17408b, #c9082a);
   height: 10vh;
@@ -25,6 +33,13 @@ header {
   justify-content: center;
   border: solid;
   margin-bottom: 75px;
+}
+
+@media (max-width: 720px) {
+  header {
+    width: 360px;
+    margin-bottom: 35px;
+  }
 }
 
 header p {
@@ -80,6 +95,15 @@ main {
   margin-bottom: 75px;
 }
 
+@media (max-width: 720px) {
+
+  .busca-by-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+  }
+}
+
 .team-name {
   width: 42vw;
   height: 4.5vh;
@@ -92,6 +116,13 @@ main {
   font-size: 1rem;
   margin-right: 15px;
   outline: none;
+}
+
+@media (max-width: 720px) {
+
+  .team-name {
+    width: 260px;
+  }
 }
 
 #team::placeholder {
@@ -123,6 +154,14 @@ main {
   background-color: #ffffff;
   border: solid 3px #000;
 
+}
+
+@media (max-width: 720px) {
+
+  .cards {
+    width: auto;
+    height: auto;
+  }
 }
 
 

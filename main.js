@@ -7,12 +7,22 @@ const container = document.getElementById("player-card");
 //   const url = `https://data.nba.net/data/10s/prod/v1/2021/players.json`;
 //   const response = await fetch(url);
 //   const data = await response.json();
-//   return data.league.standard.lastName;
+//   return (data.league.standard);
 // };
 
-// const vida = acharJogadores().filter(searchPlayers('warriors'));
+// const jogadores = await acharJogadores()
 
-// console.log(vida())
+// const pl = jogadores.filter( j => j.personId == "1628389")
+
+
+
+// const ex = document.createElement('h2')
+// ex.textContent = pl[0].firstName
+
+
+// const foot = document.querySelector('#teste')
+// foot.appendChild(vida)
+
 
 
 
@@ -27,21 +37,23 @@ const playerPoints = async (id) => {
   const url = `https://data.nba.net/data/10s/prod/v1/2021/players/${id}_profile.json`;
   const response = await fetch(url);
   const data = await response.json();
-  return data.league.standard.stats.careerSummary.ppg;
+  return data.league.standard.stats.regularSeason.season[0].total.ppg;
 };
+
+
 
 const playerAssists = async (id) => {
   const url = `https://data.nba.net/data/10s/prod/v1/2021/players/${id}_profile.json`;
   const response = await fetch(url);
   const data = await response.json();
-  return data.league.standard.stats.careerSummary.apg;
+  return data.league.standard.stats.regularSeason.season[0].total.apg;
 };
 
 const playerRebounds = async (id) => {
   const url = `https://data.nba.net/data/10s/prod/v1/2021/players/${id}_profile.json`;
   const response = await fetch(url);
   const data = await response.json();
-  return data.league.standard.stats.careerSummary.rpg;
+  return data.league.standard.stats.regularSeason.season[0].total.rpg;
 };
 
 const criarImg = async (player) => {
@@ -174,6 +186,10 @@ const carregarCard = async () => {
 
   const players = await searchPlayers(time);
   players.map(criarImg);
+
+  setTimeout(() => {
+    window.location.href = "index.html#player-card"
+  }, 500) 
 };
 
 //function para limpar elementos ao pesquisar
@@ -190,12 +206,19 @@ const handleClick = async ({ target }) => {
     //chamada função para limpar os cards
     limparElementos(container);
 
+
     //buscando players por meio do id da imagem
     const players = await searchPlayers(target.id);
 
     players.map(criarImg);
 
     document.getElementById("team").value = target.id;
+
+    setTimeout(() => {
+      window.location.href = "index.html#player-card"
+    }, 500) 
+
+    
 
    
   }
