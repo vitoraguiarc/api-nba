@@ -3,6 +3,19 @@
 //div existente no html
 const container = document.getElementById("player-card");
 
+// const acharJogadores = async () => {
+//   const url = `https://data.nba.net/data/10s/prod/v1/2021/players.json`;
+//   const response = await fetch(url);
+//   const data = await response.json();
+//   return data.league.standard.lastName;
+// };
+
+// const vida = acharJogadores().filter(searchPlayers('warriors'));
+
+// console.log(vida())
+
+
+
 const searchPlayers = async (nameTeam) => {
   const url = `https://data.nba.net/data/10s/prod/v1/2021/teams/${nameTeam}/roster.json`;
   const response = await fetch(url);
@@ -14,21 +27,21 @@ const playerPoints = async (id) => {
   const url = `https://data.nba.net/data/10s/prod/v1/2021/players/${id}_profile.json`;
   const response = await fetch(url);
   const data = await response.json();
-  return data.league.standard.stats.latest.ppg;
+  return data.league.standard.stats.careerSummary.ppg;
 };
 
 const playerAssists = async (id) => {
   const url = `https://data.nba.net/data/10s/prod/v1/2021/players/${id}_profile.json`;
   const response = await fetch(url);
   const data = await response.json();
-  return data.league.standard.stats.latest.apg;
+  return data.league.standard.stats.careerSummary.apg;
 };
 
 const playerRebounds = async (id) => {
   const url = `https://data.nba.net/data/10s/prod/v1/2021/players/${id}_profile.json`;
   const response = await fetch(url);
   const data = await response.json();
-  return data.league.standard.stats.latest.rpg;
+  return data.league.standard.stats.careerSummary.rpg;
 };
 
 const criarImg = async (player) => {
@@ -183,6 +196,8 @@ const handleClick = async ({ target }) => {
     players.map(criarImg);
 
     document.getElementById("team").value = target.id;
+
+   
   }
 };
 
